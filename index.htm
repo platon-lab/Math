@@ -51,12 +51,31 @@
         
         .main-img { width: 200px; border-radius: 20px; margin-bottom: 20px; }
 
-        /* Сітка персонажів */
+        /* Сітка персонажів з вертикальною прокруткою */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
             margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        /* Стилізація скролбару для красивого вигляду */
+        .grid::-webkit-scrollbar {
+            width: 8px;
+        }
+        .grid::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        .grid::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        .grid::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
         }
 
         .card {
@@ -118,7 +137,6 @@
 
 <div id="game-container">
     <div id="start-screen" class="screen active">
-        <img src="Cool.png" alt="Cool" class="main-img" onerror="this.src='https://via.placeholder.com/200?text=Cool.png'">
         <h1>MATH MASTERS</h1>
         <button onclick="showScreen('char-screen')">ГРАТИ</button>
         <div id="global-scores"></div>
@@ -144,13 +162,69 @@
                 <p>Філ</p>
             </div>
             <div class="card" onclick="selectChar('Мілка', 'Milka.png')">
-                <img src="Milka.png" alt="Milka" onerror="this.src='https://via.placeholder.com/100?text=Fil'">
+                <img src="Milka.png" alt="Milka" onerror="this.src='https://via.placeholder.com/100?text=Milka'">
                 <p>Мілка</p>
             </div>
             <div class="card" onclick="selectChar('Барк', 'Bark.png')">
                 <img src="Bark.png" alt="Bark" onerror="this.src='https://via.placeholder.com/100?text=Bark'">
                 <p>Барк</p>
-
+            </div>
+            <!-- Нові 14 героїв -->
+            <div class="card" onclick="selectChar('Persik', 'Persik.png')">
+                <img src="Persik.png" alt="Persik" onerror="this.src='https://via.placeholder.com/100?text=Persik'">
+                <p>Persik</p>
+            </div>
+            <div class="card" onclick="selectChar('Spike', 'Spike.png')">
+                <img src="Spike.png" alt="Spike" onerror="this.src='https://via.placeholder.com/100?text=Spike'">
+                <p>Spike</p>
+            </div>
+            <div class="card" onclick="selectChar('Alyonka', 'Alyonka.png')">
+                <img src="Alyonka.png" alt="Alyonka" onerror="this.src='https://via.placeholder.com/100?text=Alyonka'">
+                <p>Alyonka</p>
+            </div>
+            <div class="card" onclick="selectChar('Lilu', 'Lilu.png')">
+                <img src="Lilu.png" alt="Lilu" onerror="this.src='https://via.placeholder.com/100?text=Lilu'">
+                <p>Lilu</p>
+            </div>
+            <div class="card" onclick="selectChar('Manya', 'Manya.png')">
+                <img src="Manya.png" alt="Manya" onerror="this.src='https://via.placeholder.com/100?text=Manya'">
+                <p>Manya</p>
+            </div>
+            <div class="card" onclick="selectChar('Liza', 'Liza.png')">
+                <img src="Liza.png" alt="Liza" onerror="this.src='https://via.placeholder.com/100?text=Liza'">
+                <p>Liza</p>
+            </div>
+            <div class="card" onclick="selectChar('Grivna', 'Grivna.png')">
+                <img src="Grivna.png" alt="Grivna" onerror="this.src='https://via.placeholder.com/100?text=Grivna'">
+                <p>Grivna</p>
+            </div>
+            <div class="card" onclick="selectChar('Ben', 'Ben.png')">
+                <img src="Ben.png" alt="Ben" onerror="this.src='https://via.placeholder.com/100?text=Ben'">
+                <p>Ben</p>
+            </div>
+            <div class="card" onclick="selectChar('Goldi', 'Goldi.png')">
+                <img src="Goldi.png" alt="Goldi" onerror="this.src='https://via.placeholder.com/100?text=Goldi'">
+                <p>Goldi</p>
+            </div>
+            <div class="card" onclick="selectChar('Raf', 'Raf.png')">
+                <img src="Raf.png" alt="Raf" onerror="this.src='https://via.placeholder.com/100?text=Raf'">
+                <p>Raf</p>
+            </div>
+            <div class="card" onclick="selectChar('Veles', 'Veles.png')">
+                <img src="Veles.png" alt="Veles" onerror="this.src='https://via.placeholder.com/100?text=Veles'">
+                <p>Veles</p>
+            </div>
+            <div class="card" onclick="selectChar('Masha', 'Masha.png')">
+                <img src="Masha.png" alt="Masha" onerror="this.src='https://via.placeholder.com/100?text=Masha'">
+                <p>Masha</p>
+            </div>
+            <div class="card" onclick="selectChar('Brilliantik', 'Brilliantik.png')">
+                <img src="Brilliantik.png" alt="Brilliantik" onerror="this.src='https://via.placeholder.com/100?text=Brilliantik'">
+                <p>Brilliantik</p>
+            </div>
+            <div class="card" onclick="selectChar('Richik', 'Richik.png')">
+                <img src="Richik.png" alt="Richik" onerror="this.src='https://via.placeholder.com/100?text=Richik'">
+                <p>Richik</p>
             </div>
         </div>
     </div>
